@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tik Tak Top Course - Kursus Komputer Profesional</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">Tik Tak Top</span>
+                    <span class="logo-sub">Computer Course</span>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="nav-link">Layanan <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#pendaftaran">Pendaftaran Anggota</a>
+                        <a href="#informasi">Informasi Layanan</a>
+                    </div>
+                </li>
+                <li><a href="#classes" class="nav-link">Kelas</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron / Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Selamat Datang di Tik Tak Top Course</h1>
+            <p class="hero-subtitle">Tempat belajar teknologi terdepan dengan pengajar profesional dan kurikulum terkini</p>
+            <a href="#pendaftaran" class="btn-hero">Daftar Sekarang</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Tentang Kami</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kelas Komputer">
+                </div>
+                <div class="about-text">
+                    <h3>Lembaga Kursus Komputer Terpercaya Sejak 2010</h3>
+                    <p>Tik Tak Top Course telah berdedikasi selama lebih dari 10 tahun dalam memberikan pendidikan komputer berkualitas. Kami telah meluluskan lebih dari 5.000 peserta yang kini sukses berkarir di bidang teknologi.</p>
+                    <p>Dengan metode pembelajaran yang interaktif dan kurikulum yang selalu diperbarui, kami memastikan setiap peserta mendapatkan pengalaman belajar terbaik sesuai kebutuhan industri.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5.000+</span>
+                            <span class="stat-text">Alumni</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-text">Kelas Tersedia</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">25+</span>
+                            <span class="stat-text">Instruktur</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-text">Kepuasan Peserta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Layanan Kami</h2>
+            
+            <!-- Pendaftaran Anggota -->
+            <div id="pendaftaran" class="service-section">
+                <h3 class="service-title">Pendaftaran Anggota</h3>
+                <p class="service-description">Isi formulir berikut untuk mendaftar sebagai peserta kursus di Tik Tak Top Course</p>
+                
+                <div class="form-container">
+                    <form id="registrationForm">
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap <span class="required">*</span></label>
+                            <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap">
+                            <div class="error-message" id="nama-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="program">Program Kursus <span class="required">*</span></label>
+                            <select id="program" name="program" required>
+                                <option value="">Pilih program kursus</option>
+                                <option value="Desain Grafis">Desain Grafis</option>
+                                <option value="Web Programming">Web Programming</option>
+                                <option value="Data Analysis">Data Analysis</option>
+                                <option value="Microsoft Office">Microsoft Office</option>
+                                <option value="Digital Marketing">Digital Marketing</option>
+                                <option value="Android Development">Android Development</option>
+                            </select>
+                            <div class="error-message" id="program-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="nik">NIK / Nomor Induk Siswa <span class="required">*</span></label>
+                            <input type="text" id="nik" name="nik" required placeholder="Masukkan NIK atau NIS">
+                            <div class="error-message" id="nik-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="alamat">Alamat <span class="required">*</span></label>
+                            <textarea id="alamat" name="alamat" rows="3" required placeholder="Masukkan alamat lengkap"></textarea>
+                            <div class="error-message" id="alamat-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="whatsapp">Nomor WhatsApp <span class="required">*</span></label>
+                            <input type="text" id="whatsapp" name="whatsapp" required placeholder="Contoh: 081234567890">
+                            <div class="error-message" id="whatsapp-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="kelas">Pilihan Kelas (Opsional)</label>
+                            <select id="kelas" name="kelas">
+                                <option value="">Pilih kelas (jika sudah menentukan)</option>
+                                <option value="Kelas Dasar Web">Kelas Dasar Web</option>
+                                <option value="Kelas Python Pemula">Kelas Python Pemula</option>
+                                <option value="Kelas Excel untuk Data">Kelas Excel untuk Data</option>
+                                <option value="Kelas UI/UX Design">Kelas UI/UX Design</option>
+                                <option value="Kelas JavaScript Lanjutan">Kelas JavaScript Lanjutan</option>
+                                <option value="Kelas Data Science">Kelas Data Science</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="agree" name="agree" required>
+                                <label for="agree">Saya menyetujui syarat dan ketentuan yang berlaku</label>
+                            </div>
+                            <div class="error-message" id="agree-error"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit" id="submitBtn">
+                            <span>Daftar Sekarang</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    
+                    <div class="form-message" id="formMessage"></div>
+                </div>
+            </div>
+            
+            <!-- Informasi Layanan -->
+            <div id="informasi" class="service-section">
+                <h3 class="service-title">Informasi Layanan</h3>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h4>Kurikulum Terupdate</h4>
+                        <p>Kurikulum kami selalu diperbarui mengikuti perkembangan teknologi terbaru dan kebutuhan industri.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Kelas Fleksibel</h4>
+                        <p>Pilihan kelas reguler, privat, online, dan offline untuk menyesuaikan waktu dan kebutuhan Anda.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Sertifikasi</h4>
+                        <p>Setelah menyelesaikan kursus, peserta akan mendapatkan sertifikat yang diakui industri.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4>Bantuan Karir</h4>
+                        <p>Kami memberikan konsultasi karir dan informasi lowongan kerja untuk alumni.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="section">
+        <div class="container">
+            <h2 class="section-title">Kelas & Program Kursus</h2>
+            <p class="section-subtitle">Pilih program yang sesuai dengan minat dan tujuan karir Anda</p>
+            
+            <div class="classes-grid">
+                <div class="class-card">
+                    <div class="class-header">
+                        <h3>Kelas Dasar Web</h3>
+                        <span class="class-badge">Populer</span>
+                    </div>
+                    <div class="class-content">
+                        <p>Belajar HTML, CSS, dan JavaScript dasar untuk membangun website dari nol.</p>
+                        <ul class="class-features">
+                            <li><i class="fas fa-check"></i> Durasi: 6 Minggu</li>
+                            <li><i class="fas fa-check"></i> Level: Pemula</li>
+                            <li><i class="fas fa-check"></i> Mode: Online/Offline</li>
+                        </ul>
+                    </div>
+                    <div class="class-footer">
+                        <span class="class-price">Rp 1.500.000</span>
+                        <a href="#pendaftaran" class="btn-class">Daftar Kelas</a>
+                    </div>
+                </div>
+                
+                <div class="class-card">
+                    <div class="class-header">
+                        <h3>Kelas Python Pemula</h3>
+                        <span class="class-badge">Terbaru</span>
+                    </div>
+                    <div class="class-content">
+                        <p>Pengenalan pemrograman Python untuk analisis data dan automasi sederhana.</p>
+                        <ul class="class-features">
+                            <li><i class="fas fa-check"></i> Durasi: 8 Minggu</li>
+                            <li><i class="fas fa-check"></i> Level: Pemula</li>
+                            <li><i class="fas fa-check"></i> Mode: Online/Offline</li>
+                        </ul>
+                    </div>
+                    <div class="class-footer">
+                        <span class="class-price">Rp 2.000.000</span>
+                        <a href="#pendaftaran" class="btn-class">Daftar Kelas</a>
+                    </div>
+                </div>
+                
+                <div class="class-card">
+                    <div class="class-header">
+                        <h3>Kelas Excel untuk Data</h3>
+                    </div>
+                    <div class="class-content">
+                        <p>Menguasai Excel untuk analisis data, visualisasi, dan pelaporan bisnis.</p>
+                        <ul class="class-features">
+                            <li><i class="fas fa-check"></i> Durasi: 4 Minggu</li>
+                            <li><i class="fas fa-check"></i> Level: Menengah</li>
+                            <li><i class="fas fa-check"></i> Mode: Online/Offline</li>
+                        </ul>
+                    </div>
+                    <div class="class-footer">
+                        <span class="class-price">Rp 1.200.000</span>
+                        <a href="#pendaftaran" class="btn-class">Daftar Kelas</a>
+                    </div>
+                </div>
+                
+                <div class="class-card">
+                    <div class="class-header">
+                        <h3>Kelas Desain Grafis</h3>
+                    </div>
+                    <div class="class-content">
+                        <p>Belajar Adobe Photoshop, Illustrator, dan CorelDraw untuk desain kreatif.</p>
+                        <ul class="class-features">
+                            <li><i class="fas fa-check"></i> Durasi: 10 Minggu</li>
+                            <li><i class="fas fa-check"></i> Level: Semua Level</li>
+                            <li><i class="fas fa-check"></i> Mode: Offline</li>
+                        </ul>
+                    </div>
+                    <div class="class-footer">
+                        <span class="class-price">Rp 2.500.000</span>
+                        <a href="#pendaftaran" class="btn-class">Daftar Kelas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-laptop-code"></i>
+                        <div>
+                            <h3>Tik Tak Top Course</h3>
+                            <p>Kursus Komputer Profesional</p>
+                        </div>
+                    </div>
+                    <p>Lembaga kursus komputer terpercaya yang telah membantu ribuan peserta menguasai teknologi untuk karir yang lebih baik.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Kontak Kami</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jl. Teknologi No. 123, Jakarta Pusat, DKI Jakarta 10110</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(021) 1234-5678</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@tiktaktopcourse.com</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <span>0812-3456-7890</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Jam Operasional</h4>
+                    <ul class="footer-hours">
+                        <li>Senin - Jumat: <span>08:00 - 21:00</span></li>
+                        <li>Sabtu: <span>08:00 - 17:00</span></li>
+                        <li>Minggu: <span>09:00 - 15:00</span></li>
+                        <li>Hari Libur: <span>Tutup</span></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Link Cepat</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Tentang Kami</a></li>
+                        <li><a href="#pendaftaran">Pendaftaran</a></li>
+                        <li><a href="#classes">Kelas</a></li>
+                        <li><a href="#informasi">Informasi Layanan</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Tik Tak Top Course. All rights reserved.</p>
+                <p>Website dibuat dengan ❤️ untuk kemajuan pendidikan teknologi di Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
